@@ -1,0 +1,123 @@
+---
+title: Changelog
+description: Stay updated with the latest releases, new features, and improvements in EssayFlash.
+---
+
+## Overview
+
+EssayFlash continually evolves to help you organize and manage your project documentation more effectively. Check this changelog regularly to see what's new. You receive automatic notifications for major releases via your dashboard at `https://dashboard.example.com`.
+
+<Callout kind="info">
+  Subscribe to our RSS feed or email updates at `https://docs.example.com/rss` to stay informed without visiting this page.
+</Callout>
+
+## Recent Updates
+
+<Update label="2024-10-15" description="v1.3.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration, allowing multiple users to edit documents simultaneously with live cursors and conflict resolution.
+- Introduced AI-powered search that understands context and suggests related sections across your documentation space.
+- New export formats including PDF with customizable themes and Markdown bundles for GitHub integration.
+
+## Improvements
+
+- Enhanced performance with lazy loading for large documentation trees, reducing initial load time by `>50%`.
+- Improved mobile responsiveness for the editor, now supporting touch gestures for navigation.
+
+## Bug Fixes
+
+- Fixed intermittent sync issues when switching between browser tabs.
+- Resolved accessibility violations in table editing, ensuring WCAG 2.1 compliance.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Version history with diff viewer, enabling you to revert changes or compare versions side-by-side.
+- Customizable sidebar themes and keyboard shortcuts for power users.
+- Integrated webhook support for `https://your-webhook-url.com/webhook` to notify external services on document updates.
+
+## Bug Fixes
+
+- Patched security vulnerability in shared link permissions (CVE-2024-XXXX).
+- Fixed drag-and-drop reordering in nested pages that caused hierarchy corruption.
+
+## Improvements
+
+- Optimized image uploads, now supporting files `<10MB` with automatic optimization.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.1.0" tags={["breaking", "feature"]}>
+
+## Breaking Changes
+
+- Updated API authentication to require `{API_KEY}` headers instead of query params. Migrate using the guide below.
+
+## New Features
+
+- Full-text search across all projects with fuzzy matching.
+- Template gallery for common documentation structures like API references and changelogs.
+
+## Improvements
+
+- Dashboard analytics showing most-edited pages and collaboration stats.
+
+</Update>
+
+## Upgrading EssayFlash
+
+Follow these steps to update your instance or SDK integration.
+
+<Steps>
+  <Step title="Check Current Version" icon="check-circle">
+
+    Open your dashboard and navigate to Settings > About. Note your current version.
+
+  </Step>
+  <Step title="Backup Data" icon="database">
+
+    Export your documentation via the bulk export tool to avoid data loss.
+
+  </Step>
+  <Step title="Run Update" icon="download">
+
+    Use the CLI or dashboard updater.
+
+    <CodeGroup tabs="CLI,npm">
+      ````bash
+      essayflash update --latest
+      ````
+
+      ````bash
+      npm update essayflash-sdk@latest
+      ````
+    </CodeGroup>
+
+  </Step>
+  <Step title="Verify" icon="shield-check">
+
+    Test key features like search and exports. Check logs for deprecation warnings.
+
+  </Step>
+</Steps>
+
+<Columns cols={3}>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Get started after upgrade.
+  </Card>
+  <Card title="Authentication" icon="lock" href="/authentication">
+    Update your `{API_KEY}` setup.
+  </Card>
+  <Card title="API Reference" icon="code" href="/introduction">
+    Review breaking changes.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  For v1.3.0, clear your browser cache after upgrading to experience improved performance.
+</Callout>
